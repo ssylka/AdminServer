@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.EntityFrameworkCore;
 using WebServer.Data;
@@ -23,6 +24,7 @@ public class CheckUserStatusAttribute : ActionFilterAttribute
 
         if (user == null || user.Status == UserStatus.Blocked)
         {
+            context.HttpContext.SignOutAsync("Cookies").Wait();
             context.Result = new RedirectToActionResult("Add", "User", null);
         }
     }
