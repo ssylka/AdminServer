@@ -123,7 +123,7 @@ namespace WebServer.Controllers
                 user.Status = UserStatus.Active;
             }
             else
-            { 
+            {
                 return Content("You are blocked");
             }
 
@@ -221,9 +221,9 @@ namespace WebServer.Controllers
                 .ToListAsync();
 
             foreach (var user in users)
-                if(user.Status == UserStatus.Blocked)
+                if (user.Status == UserStatus.Blocked)
                     user.Status = UserStatus.Active;
-                
+
             await dbContext.SaveChangesAsync();
 
             return Ok();
