@@ -94,6 +94,16 @@ namespace WebServer.Controllers
 
             await dbContext.SaveChangesAsync();
 
+            var claims = new List<Claim> // Create claims for the user
+            {
+                new Claim(ClaimTypes.Name, user.Email)
+            };
+
+            var identity = new ClaimsIdentity(claims, "Cookies");
+
+            await HttpContext.SignInAsync("Cookies",
+                new ClaimsPrincipal(identity));
+
             return RedirectToAction("MainPage");
         }
 

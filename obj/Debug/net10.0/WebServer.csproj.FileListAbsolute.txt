@@ -229,3 +229,4 @@ C:\Users\Стас\source\repos\WebServer\WebServer\obj\Debug\net10.0\compressed\
 C:\Users\Стас\source\repos\WebServer\WebServer\bin\Debug\net10.0\BouncyCastle.Cryptography.dll
 C:\Users\Стас\source\repos\WebServer\WebServer\bin\Debug\net10.0\MailKit.dll
 C:\Users\Стас\source\repos\WebServer\WebServer\bin\Debug\net10.0\MimeKit.dll
+C:\Users\Стас\source\repos\WebServer\WebServer\obj\Debug\net10.0\WebServer.sourcelink.json
