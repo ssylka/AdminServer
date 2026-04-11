@@ -66,7 +66,7 @@ namespace WebServer.Controllers
                 Name = _user.Name,
                 Surname = _user.Surname,
                 Status = UserStatus.Unverified,
-                LastLoginTime = DateTime.Now,
+                LastLoginTime = DateTime.UtcNow,
                 EmailConfirmationToken = token
             };
 
@@ -174,7 +174,7 @@ namespace WebServer.Controllers
 
 
             // update last login time
-            user.LastLoginTime = DateTime.Now;
+            user.LastLoginTime = DateTime.UtcNow;
             await dbContext.SaveChangesAsync();
 
             if (!string.IsNullOrEmpty(returnUrl))
