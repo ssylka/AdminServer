@@ -232,3 +232,4 @@ C:\Users\Стас\source\repos\WebServer\WebServer\obj\Debug\net10.0\WebServer.s
 C:\Users\Стас\source\repos\WebServer\WebServer\bin\Debug\net10.0\Npgsql.dll
 C:\Users\Стас\source\repos\WebServer\WebServer\bin\Debug\net10.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
 C:\Users\Стас\source\repos\WebServer\WebServer\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
+C:\Users\Стас\source\repos\WebServer\WebServer\obj\Debug\net10.0\compressed\kdn0asiz3x-{0}-ycg45f3r4n-ycg45f3r4n.gz
