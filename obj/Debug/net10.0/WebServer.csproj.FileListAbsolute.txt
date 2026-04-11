@@ -90,7 +90,6 @@ C:\Users\Стас\source\repos\WebServer\WebServer\obj\Debug\net10.0\staticwebas
 C:\Users\Стас\source\repos\WebServer\WebServer\obj\Debug\net10.0\staticwebassets.development.json
 C:\Users\Стас\source\repos\WebServer\WebServer\obj\Debug\net10.0\staticwebassets.build.endpoints.json
 C:\Users\Стас\source\repos\WebServer\WebServer\obj\Debug\net10.0\swae.build.ex.cache
-C:\Users\Стас\source\repos\WebServer\WebServer\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
 C:\Users\Стас\source\repos\WebServer\WebServer\obj\Debug\net10.0\WebServer.dll
 C:\Users\Стас\source\repos\WebServer\WebServer\obj\Debug\net10.0\refint\WebServer.dll
 C:\Users\Стас\source\repos\WebServer\WebServer\obj\Debug\net10.0\WebServer.pdb
@@ -230,3 +229,6 @@ C:\Users\Стас\source\repos\WebServer\WebServer\bin\Debug\net10.0\BouncyCastl
 C:\Users\Стас\source\repos\WebServer\WebServer\bin\Debug\net10.0\MailKit.dll
 C:\Users\Стас\source\repos\WebServer\WebServer\bin\Debug\net10.0\MimeKit.dll
 C:\Users\Стас\source\repos\WebServer\WebServer\obj\Debug\net10.0\WebServer.sourcelink.json
+C:\Users\Стас\source\repos\WebServer\WebServer\bin\Debug\net10.0\Npgsql.dll
+C:\Users\Стас\source\repos\WebServer\WebServer\bin\Debug\net10.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\Стас\source\repos\WebServer\WebServer\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
