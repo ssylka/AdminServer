@@ -1,7 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-//using Microsoft.EntityFrameworkCore.SqlServer;
 using WebServer.Data;
-//using Npgsql.EntityFrameworkCore.PostgreSQL;
 
 namespace WebServer
 {

@@ -1,5 +1,8 @@
+wwwroot\css\checkout.css
+wwwroot\css\sign-in.css
 wwwroot\css\site.css
 wwwroot\favicon.ico
+wwwroot\js\checkout.js
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
@@ -61,11 +64,12 @@ wwwroot\lib\jquery\dist\jquery.slim.js
 wwwroot\lib\jquery\dist\jquery.slim.min.js
 wwwroot\lib\jquery\dist\jquery.slim.min.map
 wwwroot\lib\jquery\LICENSE.txt
-wwwroot\css\checkout.css
-wwwroot\js\checkout.js
-wwwroot\css\sign-in.css
+wwwroot\js\mainpage.js
+C:\Users\Стас\source\repos\WebServer\WebServer\wwwroot\css\checkout.css
+C:\Users\Стас\source\repos\WebServer\WebServer\wwwroot\css\sign-in.css
 C:\Users\Стас\source\repos\WebServer\WebServer\wwwroot\css\site.css
 C:\Users\Стас\source\repos\WebServer\WebServer\wwwroot\favicon.ico
+C:\Users\Стас\source\repos\WebServer\WebServer\wwwroot\js\checkout.js
 C:\Users\Стас\source\repos\WebServer\WebServer\wwwroot\js\site.js
 C:\Users\Стас\source\repos\WebServer\WebServer\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
 C:\Users\Стас\source\repos\WebServer\WebServer\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
@@ -126,6 +130,4 @@ C:\Users\Стас\source\repos\WebServer\WebServer\wwwroot\lib\jquery\dist\jquer
 C:\Users\Стас\source\repos\WebServer\WebServer\wwwroot\lib\jquery\dist\jquery.slim.min.js
 C:\Users\Стас\source\repos\WebServer\WebServer\wwwroot\lib\jquery\dist\jquery.slim.min.map
 C:\Users\Стас\source\repos\WebServer\WebServer\wwwroot\lib\jquery\LICENSE.txt
-C:\Users\Стас\source\repos\WebServer\WebServer\wwwroot\css\checkout.css
-C:\Users\Стас\source\repos\WebServer\WebServer\wwwroot\js\checkout.js
-C:\Users\Стас\source\repos\WebServer\WebServer\wwwroot\css\sign-in.css
+C:\Users\Стас\source\repos\WebServer\WebServer\wwwroot\js\mainpage.js
