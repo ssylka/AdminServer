@@ -8,16 +8,21 @@ using WebServer.Data;
 using WebServer.Models.DTO;
 using WebServer.Models.Entities;
 using WebServer.Services;
+using MailKit.Net.Smtp;
+using MailKit.Security;
+using MimeKit;
 
 namespace WebServer.Controllers
 {
     public class UserController : Controller
     {
         private readonly ApplicationDBContext dbContext;
+        private readonly EmailService emailService;
 
-        public UserController(ApplicationDBContext dbContext)
+        public UserController(ApplicationDBContext dbContext, EmailService emailService)
         {
             this.dbContext = dbContext;
+            this.emailService = emailService;
         }
 
         [Authorize]
@@ -57,6 +62,13 @@ namespace WebServer.Controllers
             {
                 return View(_user);
             }
+
+            if (await dbContext.Users.AnyAsync(u => u.Email == _user.Email))
+            {
+                ModelState.AddModelError("Email", "User with this email already exists");
+                return View(_user);
+            }
+
             var token = Guid.NewGuid().ToString();
 
             var user = new User
@@ -70,26 +82,29 @@ namespace WebServer.Controllers
                 EmailConfirmationToken = token
             };
 
-            var confirmationLink = Url.Action(
-                "ConfirmEmail",
-                "User",
-                new { email = user.Email, token = token },
-                Request.Scheme
-            );
+            //var confirmationLink = Url.Action(
+            //    "ConfirmEmail",
+            //    "User",
+            //    new { email = user.Email, token = token },
+            //    $"{Request.Scheme}://{Request.Host}"
+            //);
 
-            var emailService = new EmailService();
+            var baseUrl = $"{Request.Scheme}://{Request.Host}";
+            var confirmationLink = $"{baseUrl}/User/ConfirmEmail?email={user.Email}&token={token}";
 
-            await Task.Run(() => emailService.SendEmail(
-                user.Email,
-                "Confirm your email\n",
-                $"Click here: <a href='{confirmationLink}'>Confirm</a>"
-            ));
+            //try
+            //{
+            await emailService.SendEmail(
+                    user.Email,
+                    "Confirm your email",
+                    $"Click here: <a href='{confirmationLink}'>Confirm</a>");
+            //}
+            //catch
+            //{
+            //    return Content("Error sending email");
+            //}
 
-            if (await dbContext.Users.AnyAsync(u => u.Email == _user.Email))
-            {
-                ModelState.AddModelError("Email", "User with this email already exists");
-                return View(_user);
-            }
+
             await dbContext.Users.AddAsync(user);
 
             await dbContext.SaveChangesAsync();

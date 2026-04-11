@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using WebServer.Data;
+using WebServer.Services;
 
 namespace WebServer
 {
@@ -35,6 +36,9 @@ namespace WebServer
 
             builder.Services.AddDbContext<ApplicationDBContext>(options =>
                 options.UseNpgsql(connectionString));
+
+            builder.Services.AddScoped<EmailService>();
+
 
             builder.Services.AddAuthentication("Cookies")
                 .AddCookie("Cookies", options =>
@@ -76,6 +80,7 @@ namespace WebServer
             }
 
             app.Run();
+
         }
     }
 }
