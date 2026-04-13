@@ -82,28 +82,13 @@ namespace WebServer.Controllers
                 EmailConfirmationToken = token
             };
 
-            //var confirmationLink = Url.Action(
-            //    "ConfirmEmail",
-            //    "User",
-            //    new { email = user.Email, token = token },
-            //    $"{Request.Scheme}://{Request.Host}"
-            //);
-
             var baseUrl = $"{Request.Scheme}://{Request.Host}";
             var confirmationLink = $"{baseUrl}/User/ConfirmEmail?email={user.Email}&token={token}";
 
-            //try
-            //{
             await emailService.SendEmail(
                     user.Email,
                     "Confirm your email",
                     $"Click here: <a href='{confirmationLink}'>Confirm</a>");
-            //}
-            //catch
-            //{
-            //    return Content("Error sending email");
-            //}
-
 
             await dbContext.Users.AddAsync(user);
 
@@ -201,6 +186,7 @@ namespace WebServer.Controllers
         }
 
         [HttpPost]
+        [CheckUserStatus]
         public async Task<IActionResult> DeleteSelected([FromBody] List<int> ids)
         {
             var users = await dbContext.Users
@@ -214,6 +200,7 @@ namespace WebServer.Controllers
         }
 
         [HttpPost]
+        [CheckUserStatus]
         public async Task<IActionResult> BlockSelected([FromBody] List<int> ids)
         {
             var users = await dbContext.Users
@@ -229,6 +216,7 @@ namespace WebServer.Controllers
         }
 
         [HttpPost]
+        [CheckUserStatus]
         public async Task<IActionResult> UnblockSelected([FromBody] List<int> ids)
         {
             var users = await dbContext.Users
@@ -245,6 +233,7 @@ namespace WebServer.Controllers
         }
 
         [HttpPost]
+        [CheckUserStatus]
         public async Task<IActionResult> DeleteUnverified()
         {
             var users = await dbContext.Users
